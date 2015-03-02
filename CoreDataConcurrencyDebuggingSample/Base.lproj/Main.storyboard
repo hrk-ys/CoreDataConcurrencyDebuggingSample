@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataConcurrencyDebuggingSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqs-qu-kDS">
+                                <rect key="frame" x="233" y="28" width="135" height="30"/>
+                                <state key="normal" title="Main Thread Create">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedMainThreadCreate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VPM-FE-YRL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlM-Cc-xZO">
+                                <rect key="frame" x="208" y="66" width="185" height="30"/>
+                                <state key="normal" title="Background Thread Create">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedBackgroundThreadCreate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ywK-tB-qBh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7Z-6G-qHF">
+                                <rect key="frame" x="234" y="104" width="133" height="30"/>
+                                <state key="normal" title="Main Thread Select">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedMainThreadSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Icr-eE-SFE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH9-70-nng">
+                                <rect key="frame" x="209" y="142" width="183" height="30"/>
+                                <state key="normal" title="Background Thread Select">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedBackgroundThreadSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="quZ-D2-Urb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wqs-qu-kDS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="9Nd-Hc-z2C"/>
+                            <constraint firstItem="vlM-Cc-xZO" firstAttribute="top" secondItem="wqs-qu-kDS" secondAttribute="bottom" constant="8" id="G4g-VO-VYL"/>
+                            <constraint firstAttribute="centerX" secondItem="wqs-qu-kDS" secondAttribute="centerX" id="OOI-KZ-FQC"/>
+                            <constraint firstItem="p7Z-6G-qHF" firstAttribute="top" secondItem="vlM-Cc-xZO" secondAttribute="bottom" constant="8" id="d66-hE-O9m"/>
+                            <constraint firstItem="PH9-70-nng" firstAttribute="top" secondItem="p7Z-6G-qHF" secondAttribute="bottom" constant="8" id="dNY-Ro-XGX"/>
+                            <constraint firstAttribute="centerX" secondItem="PH9-70-nng" secondAttribute="centerX" id="fYK-gm-6Pv"/>
+                            <constraint firstAttribute="centerX" secondItem="vlM-Cc-xZO" secondAttribute="centerX" id="lPb-gt-gQ6"/>
+                            <constraint firstAttribute="centerX" secondItem="p7Z-6G-qHF" secondAttribute="centerX" id="pGt-u7-2xj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
